@@ -26,15 +26,15 @@
   手順2が終わったらユーザに確認を取り、問題なければ手順3に進みます。
   以下、同様です。
 
-  各ファイル作成後、ログを```_rules/log/```に記述します。
+  各ファイル作成後、ログを```_rules/log/rules_dev.log```に記述します。
   ファイル作成時に気になることや懸念事項などあれば、質問して構いません。
 
-  |手順|種類|ファイル名|ルールファイル|ログファイル|
-  |---|---|---|----|----|
-  |1|基本設計書|{filename}_v{n}.{m}_base.md|rules_dev_1_base.md|rules_dev.log|
-  |2|基本設計書確認|{filename}_v{n}.{m}_base.md|rules_dev_2_base_confirm.md|rules_dev.log|
-  |3|詳細設計書|{filename}_v{n}.{m}_detail.md|rules_dev_3_detail.md|rules_dev.log|
-  |4|詳細設計書確認|{filename}_v{n}.{m}_detail.md|rules_dev_4_detail_confirm.md|rules_dev.log|
-  |5|コード|{filename}_v{n}.{m}.md|rules_dev_5_code.md|rules_dev.log|
-  |6|コード確認|{filename}_v{n}.{m}.md|rules_dev_6_code_confirm.md|rules_dev.log|
+  |手順|種類|ルールファイル|出力ファイル名|
+  |---|---|---|----|
+  |1|基本設計書|rules_dev_1_base.md|{filename}_v{n}.{m}_base.md|
+  |2|基本設計書確認|rules_dev_2_base_confirm.md|{filename}_v{n}.{m}_base_confirm.md|
+  |3|詳細設計書|rules_dev_3_detail.md|{filename}_v{n}.{m}_detail.md|
+  |4|詳細設計書確認|rules_dev_4_detail_confirm.md|{filename}_v{n}.{m}_detail.json|
+  |5|コード|rules_dev_5_code.md|{filename}_v{n}.{m}.{code_ext}|
+  |6|コード確認|rules_dev_6_code_confirm.md|{filename}_v{n}.{m}_code_confirm.md|
 
