@@ -31,10 +31,10 @@
 
   |手順|種類|ルールファイル|出力ファイル名|
   |---|---|---|----|
-  |1|基本設計書|rules_dev_1_base.md|{filename}_v{n}.{m}_base.md|
-  |2|基本設計書確認|rules_dev_2_base_confirm.md|{filename}_v{n}.{m}_base_confirm.md|
-  |3|詳細設計書|rules_dev_3_detail.md|{filename}_v{n}.{m}_detail.md|
-  |4|詳細設計書確認|rules_dev_4_detail_confirm.md|{filename}_v{n}.{m}_detail.json|
+  |1|基本設計書|rules_dev_1_base.md|{filename}_v{n}.{m}_1_base.md|
+  |2|基本設計書確認|rules_dev_2_base_confirm.md|{filename}_v{n}.{m}_2_base_confirm.md|
+  |3|詳細設計書|rules_dev_3_detail.md|{filename}_v{n}.{m}_3_detail.md|
+  |4|詳細設計書確認|rules_dev_4_detail_confirm.md|{filename}_v{n}.{m}_4_detail.json|
   |5|コード|rules_dev_5_code.md|{filename}_v{n}.{m}.{code_ext}|
-  |6|コード確認|rules_dev_6_code_confirm.md|{filename}_v{n}.{m}_code_confirm.md|
+  |6|コード確認|rules_dev_6_code_confirm.md|{filename}_v{n}.{m}_6_code_confirm.md|
 
