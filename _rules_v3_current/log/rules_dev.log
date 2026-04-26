@@ -1,0 +1,211 @@
+﻿[2026-04-21] common_alert_read_v1.7
+- step1: created base design `appScript_v2/common_alert_read/common_alert_read_v1.7/common_alert_read_v1.7_1_base.md` (add test audio button flow: register id_test + play)
+- step2: created base confirm `appScript_v2/common_alert_read/common_alert_read_v1.7/common_alert_read_v1.7_2_base_confirm.md`
+- step3: created detail design `appScript_v2/common_alert_read/common_alert_read_v1.7/common_alert_read_v1.7_3_detail.md` and `common_alert_read_v1.7_3_detail.json`
+- step4: created detail confirm `appScript_v2/common_alert_read/common_alert_read_v1.7/common_alert_read_v1.7_4_detail.json`
+- step5: implemented code `appScript_v2/common_alert_read/common_alert_read_v1.7/common_alert_read_v1.7.gs` and synced canonical `appScript_v2/common_alert_read/common_alert_read.gs`
+- docs: updated `summary_v2.md` (added playTestAudio button function)
+- step6: created code confirm `appScript_v2/common_alert_read/common_alert_read_v1.7/common_alert_read_v1.7_6_code_confirm.md`
+
+[2026-04-21] common_alert_read_v1.8
+- step1: created base design `appScript_v2/common_alert_read/common_alert_read_v1.8/common_alert_read_v1.8_1_base.md` (support 設定シート no/項目/値/説明)
+- step2: created base confirm `appScript_v2/common_alert_read/common_alert_read_v1.8/common_alert_read_v1.8_2_base_confirm.md`
+- step3: created detail design `appScript_v2/common_alert_read/common_alert_read_v1.8/common_alert_read_v1.8_3_detail.md` and `common_alert_read_v1.8_3_detail.json`
+- step4: created detail confirm `appScript_v2/common_alert_read/common_alert_read_v1.8/common_alert_read_v1.8_4_detail.json`
+- step5: implemented `common_alert_read_v1.8.gs` and patched canonical `appScript_v2/common_alert_read/common_alert_read.gs` (selectAlertReadSettingMap layout aware)
+- step6: created code confirm `appScript_v2/common_alert_read/common_alert_read_v1.8/common_alert_read_v1.8_6_code_confirm.md`
+
+[2026-04-21] common_alert_read_v1.9
+- step1: created base design `appScript_v2/common_alert_read/common_alert_read_v1.9/common_alert_read_v1.9_1_base.md` (設定: slack -> 音声再生 10行固定)
+- step2: created base confirm `appScript_v2/common_alert_read/common_alert_read_v1.9/common_alert_read_v1.9_2_base_confirm.md`
+- step3: created detail design `appScript_v2/common_alert_read/common_alert_read_v1.9/common_alert_read_v1.9_3_detail.md` and `common_alert_read_v1.9_3_detail.json`
+- step4: created detail confirm `appScript_v2/common_alert_read/common_alert_read_v1.9/common_alert_read_v1.9_4_detail.json`
+- step5: patched canonical `appScript_v2/common_alert_read/common_alert_read.gs` and created versioned `common_alert_read_v1.9.gs` (slack->音声再生 読み取り + fallback)
+- step6: created code confirm `appScript_v2/common_alert_read/common_alert_read_v1.9/common_alert_read_v1.9_6_code_confirm.md`
+
+[2026-04-21] common_alert_read_v2.0
+- step1: created base design `appScript_v2/common_alert_read/common_alert_read_v2.0/common_alert_read_v2.0_1_base.md` (設定: B6ヘッダ先頭、B7:E16 10行、C=項目/D=値)
+- step2: created base confirm `appScript_v2/common_alert_read/common_alert_read_v2.0/common_alert_read_v2.0_2_base_confirm.md`
+- step3: created detail design `appScript_v2/common_alert_read/common_alert_read_v2.0/common_alert_read_v2.0_3_detail.md` and `common_alert_read_v2.0_3_detail.json`
+- step4: created detail confirm `appScript_v2/common_alert_read/common_alert_read_v2.0/common_alert_read_v2.0_4_detail.json`
+- step5: patched canonical `appScript_v2/common_alert_read/common_alert_read.gs` and created versioned `common_alert_read_v2.0.gs` (設定B6固定10行 + fallback)
+- step6: created code confirm `appScript_v2/common_alert_read/common_alert_read_v2.0/common_alert_read_v2.0_6_code_confirm.md`
+
+[2026-04-21] common_alert_read_v2.1
+- step1: created base design `appScript_v2/common_alert_read/common_alert_read_v2.1/common_alert_read_v2.1_1_base.md` (条件開始セル B22 固定)
+- step2: created base confirm `appScript_v2/common_alert_read/common_alert_read_v2.1/common_alert_read_v2.1_2_base_confirm.md`
+- step3: created detail design `appScript_v2/common_alert_read/common_alert_read_v2.1/common_alert_read_v2.1_3_detail.md` and `common_alert_read_v2.1_3_detail.json`
+- step4: created detail confirm `appScript_v2/common_alert_read/common_alert_read_v2.1/common_alert_read_v2.1_4_detail.json`
+- step5: implemented `common_alert_read_v2.1.gs` and patched canonical `appScript_v2/common_alert_read/common_alert_read.gs` (条件レンジ B22:U51 固定)
+- step6: created code confirm `appScript_v2/common_alert_read/common_alert_read_v2.1/common_alert_read_v2.1_6_code_confirm.md`
+
+[2026-04-22] webhook_rci_v2.2
+- step1: created base design `appScript_v2/webhook_rci/webhook_rci_v2.2/webhook_rci_v2.2_1_base.md` (条件一致→音声再生POST + handler結果へ再生結果反映)
+- step2: created base confirm `appScript_v2/webhook_rci/webhook_rci_v2.2/webhook_rci_v2.2_2_base_confirm.md`
+- step3: created detail design `appScript_v2/webhook_rci/webhook_rci_v2.2/webhook_rci_v2.2_3_detail.md` and `webhook_rci_v2.2_3_detail.json`
+- step4: created detail confirm `appScript_v2/webhook_rci/webhook_rci_v2.2/webhook_rci_v2.2_4_detail.json`
+- step5: implemented code `appScript_v2/webhook_rci/webhook_rci_v2.2/webhook_rci_v2.2.gs` and synced canonical `appScript_v2/webhook_rci/webhook_rci.gs`
+- step6: created code confirm `appScript_v2/webhook_rci/webhook_rci_v2.2/webhook_rci_v2.2_6_code_confirm.md`
+
+[2026-04-21] common_alert_read_v2.2
+- step1: created base design `appScript_v2/common_alert_read/common_alert_read_v2.2/common_alert_read_v2.2_1_base.md` (条件更新結果をログ1行へ集約、speaker数値化)
+
+2026-04-12 JST | 手順1 | ind_common_v6.1_base.md | rules_dev_1_base.md に沿って基本設計書を再作成。入力形式・出力形式・設定を追加し、alertcondition 分割条件を反映。
+2026-04-12 JST | 手順1 | ind_common_v6.1_base.md | rules_dev.md 更新後に再確認。現行の基本設計書は最新版 rules_dev_1_base.md の必須項目を満たしているため、その内容を最新版として採用。
+2026-04-12 JST | 手順1 | ind_common_v6.1_base.md | rules_dev.md 更新後に手順1のみ再参照。手順1要件に変更はなく、現行の基本設計書を最新版として再作成扱いで採用。
+2026-04-12 JST | 手順2 | ind_common_v6.1_base.md | rules_dev_2_base_confirm.md に沿って v5 と比較確認。alertcondition 3分割、alert() 維持、入力形式・出力形式・設定・特記事項の反映を確認。
+2026-04-12 JST | 手順3 | ind_common_v6.1_detail.md | rules_dev_3_detail.md に沿って詳細設計書を作成。メイン変数、メイン関数、関数単位の処理フロー、alertcondition 分割条件を反映。
+2026-04-12 JST | 手順4 | ind_common_v6.1_detail.md | rules_dev_4_detail_confirm.md に沿って基本設計書との整合を確認。alertcondition 分割条件、即時通知維持、処理フローと特記事項の反映を確認。
+2026-04-12 JST | 手順5 | ind_common_v6.1.pine | rules_dev_5_code.md に沿ってコードを整備。alertcondition 3分割、alert() 維持、更新日時コメントの更新、しきい値別条件コメントを追記。
+2026-04-12 JST | 手順1修正 | ind_common_v6.1_base.md | alert() 出力形式を「銘柄 EMAタッチ [時間足一覧]」へ修正。出力例も合わせて更新。
+2026-04-12 JST | 手順2再確認 | ind_common_v6.1_base.md | rules_dev_2_base_confirm.md に沿って再確認。alert() 出力形式を「銘柄 EMAタッチ [時間足一覧]」へ修正後も、v5との差分と基本設計書の修正内容が整合していることを確認。
+2026-04-12 JST | 手順3修正 | ind_common_v6.1_detail.md | 基本設計書の alert() 出力形式変更に合わせて詳細設計書を修正。本文からチャート時間足文字列を除外する方針を追記。
+2026-04-12 JST | 手順4再確認 | ind_common_v6.1_detail.md | rules_dev_4_detail_confirm.md に沿って再確認。基本設計書の alert() 出力形式変更が詳細設計書へ反映され、整合していることを確認。
+2026-04-12 JST | 手順5再実施 | ind_common_v6.1.pine | 基本設計書・詳細設計書の alert() 出力形式変更に合わせてコード修正。通知本文から chart timeframe を除外。
+2026-04-12 JST | 手順6 | ind_common_v6.1.pine | rules_dev_6_code_confirm.md に沿って確認。詳細設計書の alertcondition 分割条件と alert() 出力形式変更がコードへ反映されていることを確認。
+2026-04-13 JST | 手順1再作成 | ind_common_v6.1_base.md | rules_dev_1_base.md 更新に合わせて基本設計書を全面更新。仕様継承テーブル、[ADD]/[MOD]/[KEEP]タグ、S001形式ID、コンパイル・ダイジェストを追加。
+2026-04-13 JST | 手順2 | ind_common_v6.1_base.md | rules_dev_2_base_confirm.md に沿って v5 と比較確認。仕様継承テーブル、タグ付け、S001形式ID、コンパイル・ダイジェストを含め、変更点と維持仕様が整合していることを確認。
+2026-04-13 JST | 手順1再作成 | ind_common_v6.1_base.md | rules_dev.md 修正後の再依頼に合わせて、現行 ind_common_v6.1.pine を正本として基本設計書を再作成。処理フローを S001-S016 に整理し、入力形式・出力形式・設定・特記事項を再整備。
+2026-04-13 JST | 手順2再確認 | ind_common_v6.1_base.md | rules_dev_2_base_confirm.md に沿って、ind_common_v5_base.md と現行 ind_common_v6.1.pine を比較確認。alertcondition 3分割、alert() 本文形式変更、既存機能維持、S001-S016 の処理フローが整合していることを確認。
+2026-04-13 JST | 手順3再作成 | ind_common_v6.1_detail.md | rules_dev_3_detail.md に沿って詳細設計書を再作成。基本設計書と現行 ind_common_v6.1.pine を対応づけ、[L001]-[L023] の処理フロー、[ADD]/[MOD]/[KEEP] タグ、コンパイル・ダイジェストを追加。
+2026-04-13 JST | 手順4再確認 | ind_common_v6.1_detail.md | rules_dev_4_detail_confirm.md に沿って、ind_common_v5_detail.md・ind_common_v6.1_base.md・現行 ind_common_v6.1.pine を比較確認。詳細設計書の [L001]-[L023]、alertcondition 3分割、alert() 本文形式変更、既存仕様維持が整合していることを確認。
+2026-04-13 JST | 手順4再作成 | ind_common_v6.1_detail.md / ind_common_v6.1_detail.json | rules_dev_4_detail_confirm.md 修正後に再確認を実施。詳細設計書の整合を再確認し、実装前コンパイルJSONとして ind_common_v6.1_detail.json を新規作成。
+2026-04-13 JST | 手順5再作成 | ind_common_v6.1.pine | rules_dev_5_code.md に沿ってコードを再整備。L001-L023 の設計IDコメント、先頭コメント、alertcondition 3分割、alert 本文形式、既存 KEEP ロジック維持を反映。
+2026-04-13 JST | 手順6再確認 | ind_common_v6.1.pine / ind_common_v6.1_detail.json | rules_dev_6_code_confirm.md に沿ってコード確認を実施。L001-L023 の設計ID存在、ADD/MOD の実装反映、KEEP 領域維持、alertcondition 3分割、alert 本文形式を確認し、壊れていた detail.json を有効な JSON へ修正。
+2026-04-15 JST | 設計書作成 | alert_divergence_v14.1_base.md | v13 を土台に、直近・1つ手前の表示形式を H(1,3) / L(2) / ERR(1) / Z1(2) 形式へ変更する基本設計を追加。
+2026-04-15 JST | 設計書確認 | alert_divergence_v14.1_detail.md | selectDivergenceCellText() と selectGroupedDivergenceText() を使った集約表示フローを詳細設計へ反映。
+2026-04-15 JST | コード作成 | alert_divergence_v14.1.gs | recent / previous の整形を接頭辞ごとの括弧形式へ変更し、v14.1 として新規作成。
+2026-04-15 JST | 手順1 基本設計書 | alert_divergence_v14.1_base.md | rules_dev_1_base.md に従い、v13 を土台に仕様継承テーブル、S001-S006、タグ、集計レポートを付けて v14.1 基本設計書を作成。
+2026-04-15 JST | 手順2 基本設計書確認 | alert_divergence_v14.1_base.md | rules_dev_2_base_confirm.md に従い、命名、S001-S006、タグ、仕様継承、集計件数を確認し、基本設計完了と判定。
+2026-04-15 JST | 手順2 結果出力 | alert_divergence_v14.1_base.result | rules_dev_2_base_confirm.md の指示に従い、基本設計書確認結果を result ファイルとして出力。
+2026-04-15 JST | 手順3 詳細設計書 | alert_divergence_v14.1_detail.md | rules_dev_3_detail.md に従い、v13 を土台に L001-L020、タグ、集計レポートを付けて v14.1 詳細設計書を作成。
+2026-04-15 JST | 手順4 詳細設計書確認 | alert_divergence_v14.1_detail.md / alert_divergence_v14.1_detail.json | rules_dev_4_detail_confirm.md に従い、v13 詳細設計書との差分確認と全仕様の JSON コンパイルを実施。
+2026-04-15 JST | 手順5 コード作成 | alert_divergence_v14.1.gs | rules_dev_5_code.md に従い、detail.json の ADD/MOD 対応を実装し、L001-L020 の設計IDコメントをコードへ付与。
+2026-04-15 JST | 手順6 コード確認 | alert_divergence_v14.1_code_confirm.md | rules_dev_6_code_confirm.md に従い、設計ID・JSON仕様・不変条件を確認し、実行確認未実施のため総合判定を不合格で出力。
+2026-04-15 JST | 手順6 コード確認更新 | alert_divergence_v14.1_code_confirm.md | 実行環境がないため動作確認は不要とのユーザ指示に基づき、Execution を対象外扱いへ更新し、総合判定を合格へ修正。
+2026-04-16 JST | 手順1 | sheet_tool_v8.1_1_base.md | 開発ルール再確認後にやり直し。alert_rci_v22.pine の R2 payload と 11桁 record、Slack 通知の sheet_tool 移管を前提に基本設計を再作成。
+2026-04-16 JST | 手順1 | sheet_tool_v8_base.md | 条件シートを通知許可条件へ反転し、filtered 通知の Slack 送信可否設定 `slackNotifyFiltered` を追加する基本設計書を作成。
+2026-04-16 JST | 手順2 | sheet_tool_v8_base_confirm.md | Slack 通知機能を sheet_tool 側へ移し、rci は NotificationFilterLib の公開関数を呼ぶ構成へ基本設計を確認・更新。
+2026-04-16 JST | 手順1 | alert_rci_v22_base.md | 閾値外で確定した RCI 極値も通知対象に広げるため、v21 を土台に仕様継承テーブル、S001-S011、タグ、コンパイル・ダイジェスト付きの基本設計書を作成。
+2026-04-16 JST | 手順1修正 | alert_rci_v22_base.md | `nextExpected`、極値位置区分、閾値外の向き限定通知、局面中の最大値/最小値更新による切上がり/切下がり成立状態を基本設計書へ反映。
+2026-04-16 JST | 手順1修正 | alert_rci_v22_base.md | 入力形式をテーブル化し、受信側実装可能な `R2` / 11桁 record の出力コード体系、各桁定義、復号例を基本設計書へ反映。
+2026-04-16 JST | 手順2 | alert_rci_v22_base.md / alert_rci_v22_2_base_confirm.md | rules_dev_2_base_confirm.md に従い、処理フローID、タグ、入出力整合、`R2` 11桁 record 定義、集計件数、復号例を確認し、基本設計完了と判定。
+2026-04-16 JST | 手順3 | alert_rci_v22_detail.md | rules_dev_3_detail.md に従い、v21 コードと v22 基本設計書を土台に、`nextExpected`、閾値外最大値/最小値、R2 11桁 record、L001-L023 の処理フローを持つ詳細設計書を作成。
+2026-04-16 JST | 手順4 | alert_rci_v22_detail.md / alert_rci_v22_4_detail.json | rules_dev_4_detail_confirm.md に従い、詳細設計書のタグ件数を補正し、L001-L023 を JSON へコンパイルして実装前仕様を固定。
+2026-04-16 JST | 手順5着手 | alert_rci_v22.pine | v22 コードを分割パッチで新規作成開始。ヘッダ、設定、内部コード、RCI計算、極値判定、bundle取得、record構築、状態配列まで実装。
+2026-04-16 JST | 手順5完了 | alert_rci_v22.pine | 36 通貨ペア・時間足の処理連結、nextExpected と閾値外最大値/最小値管理、R2 webhook 生成を追加し、v22 コードを完成。
+2026-04-16 JST | 手順6 | alert_rci_v22_6_code_confirm.md | rules_dev_6_code_confirm.md に従い、設計ID、JSON仕様、KEEP領域、不変条件を確認。実行確認はユーザ指示により対象外扱いとして合格レポートを出力。
+2026-04-16 JST | 手順1 | div_test_v1.1_base.md | rules_dev_1_base.md に従い、新規 RCI オーバーレイ表示の基本設計書を作成。可視範囲連動の表示帯、初期値 60/-60/52/52/52、スケール非表示方針を反映。
+2026-04-16 JST | 手順1 配置変更 | pine/div_test/div_test_v1.1_base.md / pine/div_test/div_test_v1.1.pine | ユーザ指示に従い、div_test 関連ファイルの配置先を pine/div_test 配下へ移動。
+2026-04-16 JST | 手順2 | pine/div_test/div_test_v1.1_base.md / pine/div_test/div_test_v1.1_base.result | rules_dev_2_base_confirm.md に従い、命名、S001-S008、[ADD]タグ、仕様継承テーブル、集計件数を確認し、基本設計完了と判定。
+2026-04-16 JST | 手順3 | pine/div_test/div_test_v1.1_detail.md | rules_dev_3_detail.md に従い、div_test_v1.1.pine を正本として L001-L307、メイン変数、メイン関数、特記事項、集計レポート付きの詳細設計書を作成。
+2026-04-16 JST | 手順4 | pine/div_test/div_test_v1.1_detail.md / pine/div_test/div_test_v1.1_detail.json / pine/div_test/div_test_v1.1_detail_confirm.md | rules_dev_4_detail_confirm.md に従い、基本設計書・詳細設計書・コードの整合を確認し、実装前コンパイル JSON を作成。
+2026-04-16 JST | 手順5 | pine/div_test/div_test_v1.1.pine | rules_dev_5_code.md に従い、detail.json の ADD 項目へ対応する設計IDコメント L001-L307 をコードへ整備し、メインチャート下部の RCI オーバーレイ実装を確定。
+2026-04-16 JST | 手順6 | pine/div_test/div_test_v1.1_code_confirm.md | rules_dev_6_code_confirm.md に従い、設計ID・JSON仕様・不変条件を確認。TradingView 上の実行確認未実施のため Execution は NG とし、不合格レポートを出力。
+2026-04-16 JST | 手順6 更新 | pine/div_test/div_test_v1.1_code_confirm.md | 実行環境がないため動作確認は不要とのユーザ指示に基づき、Execution を対象外扱いへ更新し、総合判定を合格へ修正。
+2026-04-16 JST | v22.1 複製 | pine/rci/alert_rci_v22.1_1_base.md / pine/rci/alert_rci_v22.1_2_base_confirm.md / pine/rci/alert_rci_v22.1_3_detail.md / pine/rci/alert_rci_v22.1_4_detail.json / pine/rci/alert_rci_v22.1.pine / pine/rci/alert_rci_v22.1_6_code_confirm.md | 現行 v22 成果物一式を v22.1 として複製し、ファイル内の版表記・参照先・JSON version・indicator タイトルを v22.1 へ更新。
+2026-04-16 JST | v22 削除 | pine/rci/alert_rci_v22_1_base.md / pine/rci/alert_rci_v22_2_base_confirm.md / pine/rci/alert_rci_v22_3_detail.md / pine/rci/alert_rci_v22_4_detail.json / pine/rci/alert_rci_v22.pine / pine/rci/alert_rci_v22_6_code_confirm.md | ユーザ指示に従い、v22.1 を正本とするため元の v22 成果物一式を削除。
+2026-04-16 JST | 手順1 | pine/library/chart_state_lib_v1.0_1_base.md | 新規 chart state library の基本設計書を作成。zigzag/divergence/adx/ema/rci を統合し、pine/divergence・pine/rci・将来の MACD 系から必要分のみ呼び出す方針を定義。
+2026-04-16 JST | 手順1更新 | pine/library/chart_state_lib_v1.0_1_base.md | ユーザ要望に合わせ、入力形式・出力形式をテーブル化し、TradingView の系列データをそのまま渡して library 内で計算する前提を明記。
+2026-04-16 JST | 手順2 | pine/library/chart_state_lib_v1.0_2_base_confirm.md | 新規 chart state library の基本設計を確認。1スロット計算、series 値受け渡し、fixed-order tuple 返却、責務分離、本文タグ件数の整合を確認し、基本設計完了と判定。
+2026-04-16 JST | 手順3 | pine/library/chart_state_lib_v1.0_3_detail.md | chart state library の詳細設計書を作成。Pine の引数型、戻り値型、exported 関数シグネチャ、divergence/RCI tuple 順序、request.security() 呼び出し例を明記。
+2026-04-16 JST | 手順4 | pine/library/chart_state_lib_v1.0_4_detail_confirm.md / pine/library/chart_state_lib_v1.0_4_detail.json | 詳細設計を確認し、関数シグネチャ、型、tuple 順序、1スロット制約、本体側 record 化責務を JSON 仕様へ固定。
+2026-04-16 JST | 手順5 | pine/library/chart_state_lib_v1.0.pine | chart state library 本体を新規作成。ADX、EMA、RCI、zone、比較足判定、divergence 集約 tuple、RCI 集約 tuple を実装。
+2026-04-16 JST | 手順6 | pine/library/chart_state_lib_v1.0_6_code_confirm.md | library コードを JSON 仕様と照合し、1スロット計算・tuple 返却・payload 非依存を確認。TradingView 上の実行確認は未実施として記録。
+2026-04-16 JST | 手順1 | pine/rci/alert_rci_v22.2_1_base.md | alert_rci_v22.1 を正本に、chart_state_lib_v1.0 を利用する v22.2 基本設計書を新規作成。RCI 計算・極値判定・context 取得・比較足判定を library 呼び出しへ移す方針を反映。
+2026-04-16 JST | 手順1更新 | pine/rci/alert_rci_v22.2_1_base.md | ユーザ要望に合わせ、EMA touch 発生時も通知する仕様を追加。t1/t2/t3 の種別は payload へ出力せず、EMA 設定・EMA touch 判定・重複通知方針を基本設計へ反映。
+2026-04-16 JST | 手順1更新 | pine/rci/alert_rci_v22.2_1_base.md | ユーザ訂正に合わせ、EMA touch の t1/t2/t3 を divergence と同様に payload へ出力する仕様へ更新。record 桁構成を見直し、emaTouchCode を追加。
+2026-04-16 JST | 手順2 | pine/rci/alert_rci_v22.2_2_base_confirm.md | v22.2 基本設計を確認。chart_state_lib 利用、EMA touch 通知追加、emaTouchCode 導入、record 12 桁化、受信側パーサ更新前提の整合を確認し、基本設計完了と判定。
+2026-04-16 JST | 謇矩・ | pine/rci/alert_rci_v22.2_3_detail.md | rules_dev_3_detail.md 縺ｫ蠕薙＞縲・22.1 隧ｳ邏ｰ險ｭ險域嶌縺ｨ v22.2 蝓ｺ譛ｬ險ｭ險域嶌縲√∝ｮ溯｣・chart_state_lib_v1.0 縺ｮ RCI tuple / EMA tuple 蛻ｩ逕ｨ縲・MA touch 騾夂衍縲・2 譯∝崋 record縲∝ｾ晏ｭ倥さ繝ｼ繝峨〒縺ｮ蜈･蜉帛ｽ｢蠑上→蜃ｦ逅・ヵ繝ｭ繝ｼ繧呈戟縺､隧ｳ邏ｰ險ｭ險域嶌繧剃ｽ懈・縲・
+2026-04-16 JST | 謇矩・ | pine/rci/alert_rci_v22.2_4_detail_confirm.md / pine/rci/alert_rci_v22.2_4_detail.json | rules_dev_4_detail_confirm.md 縺ｫ蠕薙＞縲∽ｩｳ邏ｰ險ｭ險域嶌縺ｮ謨ｴ蜷医ｒ遒ｺ隱阪＠縲・CI tuple / EMA tuple 蛻ｩ逕ｨ縲・MA touch 騾夂衍縲‘maTouchCode縲・2 譯・record縲∝女菫｡蛛ｴ parser 譖ｴ譁ｰ蜑肴署縺ｮ JSON 繧ｳ繝ｳ繝代う繝ｫ繧呈眠隕丈ｽ懈・縲・
+2026-04-16 JST | handoff_step5_6 | pine/rci/alert_rci_v22.2.pine / pine/rci/alert_rci_v22.2_6_code_confirm.md | generated v22.2 code with chart_state_lib usage, bundled request.security per slot, 12-digit record, and emaTouchCode. TradingView import compile not verified.
+2026-04-16 JST | 手順6修正 | pine/rci/alert_rci_v22.2.pine / pine/rci/alert_rci_v22.2_6_code_confirm.md | ユーザ指摘により、detail.json の ID をコードへ `// [Lxxx]` で追記し、手順6確認書を Traceability / Coverage / Invariants / Execution 形式へ修正。L004 の追跡用に fGetEmaState() を明示追加。
+2026-04-16 JST | library修正 | pine/library/chart_state_lib_v1.0.pine | TradingView コンパイルエラー対応。f_adx() の未使用引数 closeValue を削除し、library 内の呼び出しも新シグネチャへ揃えた。
+2026-04-16 JST | library修正 | pine/library/chart_state_lib_v1.0.pine / pine/rci/alert_rci_v22.2.pine | TradingView コンパイルエラー対応。f_collectRciState() の未使用引数 upperLimit/lowerLimit を削除し、RCI 側の呼び出しも新シグネチャへ更新した。
+2026-04-16 JST | library修正 | pine/library/chart_state_lib_v1.0.pine / pine/rci/alert_rci_v22.2.pine | TradingView コンパイルエラー対応。library title の `chart_state_lib_v1.0` は `.` を含み無効なため `chart_state_lib_v1_0` へ変更し、RCI 側 import 名も追従更新した。
+2026-04-16 JST | library修正 | pine/library/chart_state_lib_v1.0.pine | TradingView 警告対応。`_barIndexByTime` / `_valueByTime` / `_macdByTime` を ternary 内で呼んでいた箇所を事前評価へ変更し、scope consistency warning の解消を図った。
+2026-04-16 JST | library修正 | pine/library/chart_state_lib_v1.0.pine | TradingView 警告対応。外部 `DevLucem/ZigLib/1` 依存を外し、Pine v6 のローカル ZigZag 相当関数 `_zigzag()` と `ZigPoint` 型へ置換した。
+
+- 2026-04-16 JST | handoff_spec_sync | pine/library/chart_state_lib_v1.0_*.md,json と pine/rci/alert_rci_v22.2_*.md,json を実装確定版へ同期。library 名 chart_state_lib_v1_0、f_adx/f_collectRciState シグネチャ修正、local ZigZag 前提へ更新。
+- 2026-04-16 JST | rci_import_fix | pine/rci/alert_rci_v22.2.pine / pine/rci/alert_rci_v22.2_6_code_confirm.md | ユーザ指定の TradingView library import `cworker08654/chart_state_lib_v1_0/1` へ更新。publisher 未確定コメントを削除し、手順6確認書の実行確認欄も同期。
+
+- 2026-04-16 JST | rci_unused_cleanup | pine/rci/alert_rci_v22.2.pine / pine/rci/alert_rci_v22.2_3_detail.md / pine/rci/alert_rci_v22.2_4_detail_confirm.md / pine/rci/alert_rci_v22.2_4_detail.json / pine/rci/alert_rci_v22.2_6_code_confirm.md | 未使用の GetEmaState() を削除。EMA state は bundled CollectSlotState() / GetContext() で取得する実装に合わせて仕様書と確認書を同期。
+
+- 2026-04-16 JST | rci_code_confirm_rewrite | pine/rci/alert_rci_v22.2_6_code_confirm.md | 手順6確認書の文字化けを解消するため、現在の v22.2 実装内容に合わせて UTF-8 で全文を書き直し。
+
+- 2026-04-16 JST | rci_code_confirm_bom | pine/rci/alert_rci_v22.2_6_code_confirm.md | 手順6確認書を UTF-8 with BOM で再保存し、文字化け対策を実施。
+- 2026-04-16 JST | divergence_step1 | pine/divergence/ind_divergence_v11.1_1_base.md | ind_divergence_v11 を正本として、chart_state_lib_v1_0 利用版 v11.1 の手順1基本設計書を作成。compact payload と 36 スロット構成は維持し、計算本体のみ library へ寄せる方針を整理。
+- 2026-04-16 JST | divergence_step2 | pine/divergence/ind_divergence_v11.1_2_base_confirm.md | 手順1基本設計の確認書を作成。payload 互換維持、本体責務と library責務の切り分け、36 スロット構成維持、import 方針を確認。
+- 2026-04-16 JST | divergence_step3 | pine/divergence/ind_divergence_v11.1_3_detail.md | 手順3詳細設計書を作成。library tuple の受け順、request.security() 呼び出し形式、compact record 11 文字化、表示ロジックの本体責務を明文化。
+- 2026-04-16 JST | divergence_step4 | pine/divergence/ind_divergence_v11.1_4_detail_confirm.md / pine/divergence/ind_divergence_v11.1_4_detail.json | 手順4確認書と JSON を作成。tuple 順序、record 11 文字固定、header V2、36 スロット構成、library import 方針を固定。
+- 2026-04-16 JST | divergence_step5_6 | pine/divergence/ind_divergence_v11.1.pine / pine/divergence/ind_divergence_v11.1_6_code_confirm.md | v11.1 コードを新規作成。alert 計算本体を chart_state_lib_v1_0 の tuple 取得へ置き換え、11 文字 compact record と V2/36 スロット構成を維持。手順6確認書も作成。
+[2026-04-17 00:00:00 JST] [ADD] appScript/sheet_tool/code/sheet_tool_v8.2_1_base.md created. Step1 base design refreshed for sheet_tool Slack migration, allowlist filtering, and RCI 5-column condition spec with single RCI display column.
+[2026-04-17 00:15:00 JST] [MOD] appScript/sheet_tool/code/sheet_tool_v8.1_1_base.md / appScript/sheet_tool/code/sheet_tool_v8.1_2_base_confirm.md created and v8 legacy markdown removed. Unified sheet_tool spec to v8.1 with RCI 5-column condition spec, single RCI display column, Slack migration, and v22.2 12-digit record baseline.
+[2026-04-17 00:30:00 JST] [MOD] appScript/sheet_tool/code/sheet_tool_v8.1_1_base.md updated for step1 compliance. Reworked the base design into rules_dev_1_base.md structure with specification inheritance table, process flow table, input/output tables, settings, notes, and compile digest.
+[2026-04-17 00:45:00 JST] [ADD] appScript/sheet_tool/code/sheet_tool_v8.1_2_base_confirm.md created. Step2 confirmation completed for v8.1 base design, and the step1 compile digest counts were corrected to match actual tag occurrences.
+[2026-04-17 01:05:00 JST] [ADD] appScript/sheet_tool/code/sheet_tool_v8.1_3_detail.md created. Step3 detailed design added main variables, main functions, and [L001]-[L032] flow for allowlist filtering, RCI 5-part assembly, and Slack notification flow. Compile digest counts were aligned to actual tag occurrences.
+[2026-04-17 01:20:00 JST] [ADD] appScript/sheet_tool/code/sheet_tool_v8.1_4_detail.json created. Step4 compiled [L001]-[L032] detailed design into JSON features, validated JSON syntax, and fixed deleted_features as empty because no flow-level deletions exist.
+[2026-04-17 01:45:00 JST] [ADD] appScript/sheet_tool/code/sheet_tool_v8.1.gs created and appScript/sheet_tool/code/sheet_tool.gs updated. Step5 implemented allowlist filtering, RCI state column handling, Slack setting parsing, sendSlackNotificationsBySpreadsheetId(), and Slack webhook posting. Local syntax was checked via temporary .js copy and artifact file hash matched deploy target.
+[2026-04-17 02:05:00 JST] [ADD] appScript/sheet_tool/code/sheet_tool_v8.1_6_code_confirm.md created. Step6 verified JSON traceability and coverage, added missing // [L019] comment during confirmation, and marked overall result as fail because Apps Script runtime execution and Slack integration were not verified yet.
+[2026-04-17 14:35:00 JST] [ADD] appScript/rci/code/alert_rci_v21.1_1_base.md created. Step1 base design for rci was restarted under updated rules, with version bump from v20 to v21.1 for R2/12-digit payload support and Slack responsibility migration from rci to sheet_tool.
+[2026-04-17 14:55:00 JST] [ADD] appScript/rci/code/alert_rci_v21.1_2_base_confirm.md created. Rechecked step1 for rule compliance, corrected flow IDs from F-series to S-series and aligned compile digest counts before completing step2 confirmation.
+[2026-04-17 15:20:00 JST] [ADD] appScript/rci/code/alert_rci_v21.1_3_detail.md / appScript/rci/code/alert_rci_v21.1_3_detail.json created. Step3 detailed design regenerated under latest rules with [F001]-[F013], [V001]-[V018], [L001]-[L020], corrected compile digest counts, and valid JSON metadata for follow-up implementation.
+[2026-04-17 16:05:00 JST] [MOD] appScript/rci/code/alert_rci_v21.1_3_detail.md / appScript/rci/code/alert_rci_v21.1_3_detail.json updated. Step3 was rebuilt to follow the revised rules_dev_3_detail.md, including [Lxxx]/[Fxxx]/[Vxxx] JSON definitions and sheet_tool-aligned RCI / Slack delegation design.
+[2026-04-17 16:10:00 JST] [ADD] appScript/rci/code/alert_rci_v21.1_4_detail.json created. Step4 compiled the revised detailed design into implementation JSON with deleted feature/function lists, constraints, and invariants.
+[2026-04-17 16:20:00 JST] [ADD] appScript/rci/code/alert_rci_v21.1.gs created and appScript/rci/code/alert_rci.gs updated. Step5 implemented R2 / 12-digit parsing, extra code restoration, new RCI text generation, and sheet_tool Slack delegation.
+[2026-04-17 16:30:00 JST] [ADD] appScript/rci/code/alert_rci_v21.1_6_code_confirm.md created. Step6 verified JSON syntax, traceability comments, artifact hash match, and local syntax check; Apps Script runtime execution remains unverified.
+2026-04-18 JST | step1 | chart_state_lib_v2.0 | created chart_state_lib_v2.0_1_base.md | version bump due to new exported ZigZag API affecting public library surface
+2026-04-18 JST | step2 | chart_state_lib_v2.0 | created chart_state_lib_v2.0_2_base_confirm.md | base design validated for public API addition
+2026-04-18 JST | step3 | chart_state_lib_v2.0 | created chart_state_lib_v2.0_3_detail.md and chart_state_lib_v2.0_3_detail.json | detailed design focused on f_zigzag public export and invariants
+2026-04-18 JST | step4 | chart_state_lib_v2.0 | created chart_state_lib_v2.0_4_detail.json | compiled implementation scope for code step
+2026-04-18 JST | step5 | chart_state_lib_v2.0 | created chart_state_lib_v2.0.pine | copied v1.0 code, added release header, and kept f_zigzag export
+2026-04-18 JST | step6 | chart_state_lib_v2.0 | created chart_state_lib_v2.0_6_code_confirm.md | execution remains pending in TradingView
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.2_1_base.md created. Step1 base design defined sheet_tool_v8.2 sync, webhookUrl unification, and doPost error-log continuity.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.2_2_base_confirm.md created. Step2 confirmed v21.2 scope for webhookUrl adoption and error logging.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.2_3_detail.md / appScript/rci/code/alert_rci_v21.2_3_detail.json created. Step3 detailed the doPost try/catch flow and sheet_tool_v8.2 synchronization.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.2_4_detail.json created. Step4 compiled implementation features for runtime error logging and sheet_tool sync.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.2/alert_rci_v21.2.gs created and appScript/rci/code/alert_rci.gs updated. Step5 implemented doPost error capture and updated embedded sheet_tool.js to the v8.2 webhookUrl/id-array flow.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.2_6_code_confirm.md created. Step6 recorded traceability and left Apps Script runtime verification pending.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.3_1_base.md created. Step1 documented embedded sheet_tool.js as part of the deploy contract and required .claspignore coverage.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.3_2_base_confirm.md created. Step2 confirmed the v21.3 deployment-scope design.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.3_3_detail.md / appScript/rci/code/alert_rci_v21.3_3_detail.json created. Step3 detailed .claspignore and embedded sheet_tool runtime assumptions.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.3_4_detail.json created. Step4 compiled deploy-target requirements and invariants.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.3/alert_rci_v21.3.gs created, appScript/rci/code/alert_rci_v21.3.gs created, appScript/rci/code/alert_rci.gs updated, and appScript/rci/.claspignore updated. Step5 promoted v21.3 and allowed sheet_tool.js to be pushed.
+[2026-04-18 JST] [ADD] appScript/rci/code/alert_rci_v21.3_6_code_confirm.md created. Step6 recorded verification coverage and left runtime notification confirmation pending.
+2026-04-19 00:00 JST AppScript_v2 common/webhook/webhook_rci/webhook_divergence/auto_deploy scaffold created
+- common_v1.0, webhook_v1.0, webhook_rci_v1.0, webhook_divergence_v1.0, auto_deploy_v1.0 artifacts added
+- AppScript_v2 summary_v2.md and deploy skeleton added
+
+2026-04-21 JST | 手順1 | common_alert_read_v1.5_1_base.md | 音声共通 `common_alert_read` に master/register と master/delete を追加する基本設計書を作成。
+2026-04-21 JST | 手順2 | common_alert_read_v1.5_2_base_confirm.md | rules_dev_2_base_confirm.md に従い、S001-S012、タグ、集計の整合を確認。
+2026-04-21 JST | 手順3 | common_alert_read_v1.5_3_detail.md / common_alert_read_v1.5_3_detail.json | 詳細設計書を作成。L016-L021、F015-F018、V013-V016 を追加。
+2026-04-21 JST | 手順4 | common_alert_read_v1.5_4_detail.json | 実装前コンパイル JSON を作成（features/functions/variables/constraints/invariants）。
+2026-04-21 JST | 手順5 | common_alert_read_v1.5.gs / common_alert_read.gs | master/register と master/delete の URL 導出・POST を実装し、v2 の正本 `common_alert_read.gs` に反映。
+2026-04-21 JST | 手順6 | common_alert_read_v1.5_6_code_confirm.md | 設計ID・JSON網羅・不変条件を確認。Apps Script 実行環境での疎通未実施のため Execution は NG。
+
+2026-04-21 JST | 手順1 | common_alert_read_v1.6_1_base.md | 条件更新ボタン用 `syncConditionAudioMasters` と、条件シート B 列編集時の onEdit 背景自動更新を基本設計に追加。ボタン登録関数名を仕様として明記。
+2026-04-21 JST | 手順2 | common_alert_read_v1.6_2_base_confirm.md | rules_dev_2_base_confirm.md に従い、S001-S015、タグ、集計の整合を確認。
+2026-04-21 JST | 手順3 | common_alert_read_v1.6_3_detail.md / common_alert_read_v1.6_3_detail.json | 詳細設計書を作成。L022-L029、F019-F021、V017-V021 を追加。
+2026-04-21 JST | 手順4 | common_alert_read_v1.6_4_detail.json | 実装前コンパイル JSON を作成（features/functions/variables/constraints/invariants）。
+2026-04-21 JST | 手順5 | common_alert_read_v1.6.gs / common_alert_read.gs | 条件更新同期（register/delete）と背景更新、onEdit トリガーを実装し、v2 の正本 `common_alert_read.gs` に反映。
+2026-04-21 JST | 手順6 | common_alert_read_v1.6_6_code_confirm.md | 設計ID・JSON網羅・不変条件を確認。Apps Script 実行環境でのボタン/トリガー/疎通未実施のため Execution は NG。
+
+2026-04-21 JST | deploy | appScript_v2/auto_deploy/deploy_appscript.ps1 / deploy.md | v1 相当の clasp フロー（status / push / version / redeploy|new deploy）を実装。v2 は複数 .gs 直 push のためバージョンファイルコピーは省略。deploy.md にオプション引数を追記。
+2026-04-21 JST | deploy_doc | appScript_v2/auto_deploy/deploy_appscript.ps1 / deploy.md | 「コピー不要」と誤解される表現を修正。.claspignore 許可の正本のみ push し、バージョン別 `.gs` はスクリプトが自動コピーしない旨を明記。
+2026-04-21 JST | deploy | appScript_v2/auto_deploy/deploy_appscript.ps1 / deploy.md | v1 相当の push 前同期を追加。`{module}_v*` 配下の最新版 `.gs` を `{module}/{module}.gs` にコピー。`-skipSyncCanonical` で省略可。
+2026-04-21 JST | deploy | appScript_v2/auto_deploy/deploy_appscript.ps1 / deploy.md | デプロイ後に doPost スモーク（R2 固定ボディ）を送る仕様を追加。`-skipPostSmokeTest` で省略可。ログに postCheckResult を追記。
+
+2026-04-21 JST | 手順1 | webhook_rci_v2.1_1_base.md | 通知シート日時を receivedAt ではなく payload alertTime 由来にする基本設計を作成。
+2026-04-21 JST | 手順2 | webhook_rci_v2.1_2_base_confirm.md | 基本設計のS001-S007、タグ、集計の整合を確認。
+2026-04-21 JST | 手順3 | webhook_rci_v2.1_3_detail.md / webhook_rci_v2.1_3_detail.json | 詳細設計を作成。L013、F039、V011 を追加し、L001/V006 を変更として整理。
+2026-04-21 JST | 手順4 | webhook_rci_v2.1_4_detail.json | 実装前コンパイル JSON を作成（features/functions/variables/constraints/invariants）。
+2026-04-21 JST | 手順5 | webhook_rci_v2.1.gs | alertTime→Date 変換を追加し、通知日時を alertTime 優先へ変更。
+2026-04-21 JST | 手順6 | webhook_rci_v2.1_6_code_confirm.md | 設計ID・JSON網羅・不変条件を確認。実行環境での通知日時反映は未検証のため Execution は NG。
+
+2026-04-21 JST | 手順1 | common_alert_read_v2.2_1_base.md | 条件更新（syncConditionAudioMasters）の処理結果を集約してログシートへ1行追記し、speaker を整数化（数値以外除外）する基本設計を作成。
+2026-04-21 JST | 手順2 | common_alert_read_v2.2_2_base_confirm.md | rules_dev_2_base_confirm.md に従い、S001-S018、タグ、集計の整合を確認。
+2026-04-21 JST | 手順3 | common_alert_read_v2.2_3_detail.md / common_alert_read_v2.2_3_detail.json | 詳細設計書を作成。ログ集約（L037-L038/F027/V029-V030）と speaker 解析（F026）を追加し、F019 を変更として整理。
+2026-04-21 JST | 手順4 | common_alert_read_v2.2_4_detail_confirm.json | 詳細設計のID網羅、S-IDリンク、JSONカタログ化を確認。
+2026-04-21 JST | 手順5 | common_alert_read_v2.2.gs / common_alert_read.gs / summary_v2.md | speaker を整数送信へ変更し、register 結果をID以外同一で集約してログへ1実行=1行追記する処理を実装。正本へ反映し、概要ドキュメントへ追記。
+2026-04-21 JST | 手順6 | common_alert_read_v2.2_6_code_confirm.md | 設計ID・仕様整合・ログ形式を確認。Apps Script 実行環境でのボタン実行・疎通未実施のため Execution は NG。
+

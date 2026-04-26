@@ -1,0 +1,3 @@
+2026-04-11 JST | ind_common_v6.1_base.md | 新ルールに合わせて基本設計書を先行作成。alertcondition を 5M以上 / 15M以上 / 1H以上 の3本へ分割し、alert() は従来維持の方針を記載。
+2026-04-11 JST | ind_common_v6.1_base.md | 特記事項を詳細化し、入力設定・背景色判定仕様・ラベル表示仕様を特記事項配下へ移設。
+2026-04-11 JST | ind_common_v6.1_base.md | 特記事項に出力メッセージ仕様を追加。alertcondition と alert の本文形式を明記。
