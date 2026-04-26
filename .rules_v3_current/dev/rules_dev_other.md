@@ -3,8 +3,8 @@
   - Pine 追加ルール
     - 対象ファイル : `*.pine`
     - 参照タイミング : rules_dev_5_code.md, rules_dev_6_code_confirm.md
-    - Pine を作成または修正する前は、必ず `pine/_rules/pine_checklist.md` を確認し、`:=`、分岐内タプル代入、`request.*()` 件数、`external elements` を事前チェックすること。
-    - Pine を作成または修正する前は、`pine/_rules/pine_checklist_log.md` にチェック結果を毎回記録すること。
+    - Pine を作成または修正する前は、必ず `pine/.rules/pine_checklist.md` を確認し、`:=`、分岐内タプル代入、`request.*()` 件数、`external elements` を事前チェックすること。
+    - Pine を作成または修正する前は、`pine/.rules/pine_checklist_log.md` にチェック結果を毎回記録すること。
     
   - app 全般ルール
     - 対象ファイル : `*.*`
