@@ -1,4 +1,4 @@
-# project_agent_rules
+﻿# product_agent_rules
 
 AI エージェント向けの開発・確認ルールを管理するためのリポジトリです。
 
@@ -62,7 +62,7 @@ pull_rules.sh
 bash ./pull_rules.sh
 ```
 
-既定では `yuki746289/project_agent_rules` から取得します。
+既定では `yuki746289/product_agent_rules` から取得します。
 
 ### 選択方法
 

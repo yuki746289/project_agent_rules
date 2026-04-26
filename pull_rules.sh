@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 set -euo pipefail
 
 usage() {
@@ -14,7 +14,7 @@ selected directory into the current repository as .rules.
 USAGE
 }
 
-DEFAULT_SOURCE_REPO="yuki746289/project_agent_rules"
+DEFAULT_SOURCE_REPO="yuki746289/product_agent_rules"
 
 normalize_repo_url() {
   local repo="$1"
