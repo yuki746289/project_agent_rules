@@ -20,7 +20,8 @@
   - 参照不可: 未承認の途中成果物、他工程の未使用ルール
 
   開発を開始する前に、対象バージョンの格納フォルダを作成します。
-  以降の手順1〜6で作成する成果物は、すべてこのフォルダ内に格納します。
+  以降の手順1〜7で作成する成果物は、すべてこのフォルダ内に格納します。
+  手順8〜9で作成する仕様書、および仕様確認結果は、コード単位ではなくプロジェクト全体を対象とするため、プロジェクト直下に格納します。
 
   フォルダ名は `{filename}_v{n}.{m}` とします。
   例: `alert_rci_v21.1`
@@ -53,8 +54,8 @@
   |5|詳細設計書確認|`rules_{dev}_5_detail_confirm.md`|`{filename}_v{n}.{m}_5_detail.json`|
   |6|コード|`rules_{dev}_6_code.md`|`{filename}_v{n}.{m}.{code_ext}`|
   |7|コード確認|`rules_{dev}_7_code_confirm.md`|`{filename}_v{n}.{m}_7_code_confirm.md`|
-  |8|仕様|`rules_{dev}_8_spec.md`|`仕様_差分_v{n}.{m}.md`<br>`仕様_全体_v{n}.{m}.md`|
-  |9|仕様確認|`rules_{dev}_9_spec_confirm.md`|`{filename}_v{n}.{m}_9_spec_confirm.md`|
+  |8|仕様|`rules_{dev}_8_spec.md`|プロジェクト直下の `仕様_差分_v{n}.{m}.md`<br>プロジェクト直下の `仕様_全体_v{n}.{m}.md`|
+  |9|仕様確認|`rules_{dev}_9_spec_confirm.md`|プロジェクト直下の `仕様確認_v{n}.{m}.md`|
 
 ### 追加ルール
 

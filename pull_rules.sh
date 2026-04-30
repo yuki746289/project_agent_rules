@@ -9,8 +9,11 @@ Usage:
 Examples:
   bash ./pull_rules.sh
 
-The script copies the latest .rules_v4 directory from the source repository
-into the current repository as .rules.
+The script pulls items from the latest .rules_v4 directory in the source
+repository into the current repository's .rules directory.
+
+Existing items under .rules are replaced only after confirmation.
+Local-only items under .rules are kept.
 USAGE
 }
 
@@ -113,22 +116,75 @@ fi
 
 destination_path="$repo_root/.rules"
 
-if [[ -e "$destination_path" ]]; then
-  echo
-  echo "'.rules' already exists and will be replaced with '$selected_dir'."
-  echo "This removes the current '.rules' directory before copying the selected one."
-  if ! confirm "Replace '.rules'?"; then
-    echo "Canceled."
-    exit 0
-  fi
-  rm -rf "$destination_path"
-fi
-
-cp -R "$source_path" "$destination_path"
+mkdir -p "$destination_path"
 
 echo
-echo "Pulled '$selected_dir' into '.rules':"
+echo "Pulling items from '$selected_dir' into '.rules'."
+echo "Existing items are replaced only after confirmation."
+echo "Local-only items in '.rules' are kept."
+
+copied_count=0
+replaced_count=0
+skipped_count=0
+local_only_count=0
+
+shopt -s dotglob nullglob
+
+source_items=("$source_path"/*)
+
+if [[ "${#source_items[@]}" -eq 0 ]]; then
+  echo
+  echo "No items found in '$selected_dir'."
+fi
+
+for source_item in "${source_items[@]}"; do
+  item_name="$(basename "$source_item")"
+  destination_item="$destination_path/$item_name"
+  display_path=".rules/$item_name"
+
+  if [[ -e "$destination_item" || -L "$destination_item" ]]; then
+    echo
+    if confirm "Replace '$display_path'?"; then
+      rm -rf "$destination_item"
+      cp -R "$source_item" "$destination_item"
+      replaced_count=$((replaced_count + 1))
+    else
+      echo "Skipped '$display_path'."
+      skipped_count=$((skipped_count + 1))
+    fi
+  else
+    echo
+    if confirm "Copy new '$display_path'?"; then
+      cp -R "$source_item" "$destination_item"
+      copied_count=$((copied_count + 1))
+    else
+      echo "Skipped '$display_path'."
+      skipped_count=$((skipped_count + 1))
+    fi
+  fi
+done
+
+for destination_item in "$destination_path"/*; do
+  item_name="$(basename "$destination_item")"
+  if [[ ! -e "$source_path/$item_name" && ! -L "$source_path/$item_name" ]]; then
+    if [[ "$local_only_count" -eq 0 ]]; then
+      echo
+      echo "Local-only items kept:"
+    fi
+    echo "  .rules/$item_name"
+    local_only_count=$((local_only_count + 1))
+  fi
+done
+
+shopt -u dotglob nullglob
+
+echo
+echo "Pull complete:"
 echo "  $destination_path"
+echo "  copied: $copied_count"
+echo "  replaced: $replaced_count"
+echo "  skipped: $skipped_count"
+echo "  local-only kept: $local_only_count"
 echo
 echo "Review changes with:"
 echo "  git status --short"
