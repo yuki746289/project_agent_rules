@@ -1,39 +1,80 @@
 ## 詳細設計書の確認
 
+作成した詳細設計書（Markdown）とコンポーネント・カタログ（JSON）が、`rules_batch_4_detail.md` の制約を満たし、実装フェーズへ移行可能な品質であることを以下のチェックリストを用いて厳格に確認して下さい。
+
+### 1. 形式・構造チェック（Markdown & JSON共通）
+- [ ] **ファイル命名:** `{filename}_v{n}.{m}_4_detail.md` および `{filename}_v{n}.{m}_4_detail.json` の形式になっているか。
+- [ ] **S単位の章構成:** Markdown が各処理 `[Sxxx]` ごとの個別章で構成されているか。複数の `[Sxxx]` をまとめて、処理概要・関数・引数・戻り値・変数・処理フロー・特記事項を一括記述していないか。
+- [ ] **S別7項目の完備:** 各 `[Sxxx]` 章に、以下の7項目が欠落なく記述されているか。
+    - 1. 処理概要
+    - 2. メイン関数
+    - 3. 引数
+    - 4. 戻り値
+    - 5. メイン変数
+    - 6. 処理フロー
+    - 7. 特記事項
+- [ ] **IDの整合性:** 全ての `[Sxxx]`, `[Lxxx]`, `[Fxxx]`, `[Txxx]`, `[Ixxx]`, `[Oxxx]`, `[Vxxx]` に欠落なくユニークなIDが割り当てられているか。
+- [ ] **F/T分類の排他性:** 同一関数に `[Fxxx]` と `[Txxx]` が併記されておらず、主関数は `[Fxxx]`、補助関数は `[Txxx]` のどちらか一方のみで管理されているか。
+- [ ] **F/T未割当の禁止:** 詳細設計書および JSON に登場する全ての関数に `[Fxxx]` または `[Txxx]` のどちらかが割り当てられているか。
+- [ ] **タグの網羅:** 全ての項目（処理、ステップ、関数、引数、戻り値、変数）に `[ADD]`, `[MOD]`, `[DEL]`, `[KEEP]` のいずれかのタグが付与されているか。
+- [ ] **視覚装飾:** Markdown上で `[ADD]` は緑色、`[MOD]` は青色、`[DEL]` は赤字＋取り消し線になっているか。
+    - [KEEP] は装飾なし（黒字）のまま維持されているか。
+
+### 2. MarkdownとJSONの紐付けチェック
 - [ ] **S-ID対応の整合性:** Markdown内の各 `[Lxxx]` の説明末尾に、対応する基本設計のステップID `(Sxxx)` が漏れなく記載されているか。
+- [ ] **定義の完全性:** Markdown内の処理フロー（`[Lxxx]`）に登場する全ての関数・引数・戻り値・変数が、JSONファイル（_4_detail.json）側に漏れなく定義されているか。
+- [ ] **S別JSON対応:** Markdown の各 `[Sxxx]` 章に記載されたメイン関数、補助関数、引数、戻り値、メイン変数、処理フローが、JSON 側で同じ `[Sxxx]` または `sourceStepId` に紐づいて定義されているか。
+- [ ] **命名の一致:** Markdown内の記述と、JSON側の `name` フィールドが完全に一致しているか。
+- [ ] **カタログの充足度:** JSON側に「型（type）」「役割（description）」「引数/戻り値の構成」「使用箇所」「状態」が、実装者が迷わないレベルで記述されているか。
 
-- JSONファイル（_4_detail.json）の確認
-  - [ ] **IDの重複と漏れ:** Markdown内のロジック（`[Lxxx]`）から呼び出されている全ての関数・変数が、JSONファイル（_4_detail.json）に `[Fxxx]`, `[Vxxx]` として漏れなく定義されているか。
-  - [ ] **命名の整合性:** Markdown内の説明文で使用している変数名・関数名が、JSONの定義と完全に一致しているか。
-  - [ ] **JSONの完全性:** 実装時に迷いが生じないよう、JSON側に引数の型、戻り値、役割、使用箇所、状態が網羅されているか。
+### 3. 内容・論理チェック（仕様継承）
+- [ ] **基本設計との不整合:** 基本設計（`_2_base.md`）の各処理（`[Sxxx]`）が、詳細設計で適切にブレイクダウン（[Lxxx]化）されているか。
+- [ ] **S別詳細化の妥当性:** 基本設計の各 `[Sxxx]` が、Markdown 上で個別に詳細化され、それぞれの処理概要・メイン関数・引数・戻り値・メイン変数・処理フロー・特記事項が、その `[Sxxx]` の責務と矛盾していないか。
+- [ ] **まとめ記述の禁止:** 関数一覧、引数一覧、戻り値一覧、変数一覧、処理フロー一覧を全S共通の一括表だけで済ませていないか。共通カタログを併記する場合でも、各 `[Sxxx]` 章内に必要項目が個別に存在しているか。
+- [ ] **仕様継承の完遂:** 前バージョンの詳細設計要素が一つも漏らさず（[KEEP] [MOD] [DEL] のいずれかで）記載されているか。
+- [ ] **ロジックの衝突:** 新しく追加された補助関数（`[Txxx]`）やロジック（`[Lxxx]`）が、既存の [KEEP] ロジックの動作を意図せず破壊していないか。
 
-- 作成した詳細設計書と、参照した前バージョンの詳細設計書を比較して、詳細設計書の仕様通りの修正が出来ているかを確認して下さい。
+### 4. コンパイル・ダイジェスト（集計表）の確認
+- [ ] **数値の一致:** Markdown末尾の集計レポートの件数と、本文中の各タグの出現回数、およびJSON内のステータス別件数が完全に一致しているか。
+- [ ] **要約の正確性:** レポート内の「内容（要約）」が、実際の修正内容（ADD/MOD/DEL）を端的に表しているか。
 
-- 詳細設計の確認が完了したら、実装に入る前に、全仕様を以下の形式のJSONにコンパイル（出力）して下さい。  
-  ファイル名は、`{filename}_v{n}.{m}_5_detail.json` とします。  
-  実装コードはこのJSONの項目を1つも漏らさずカバーしなければなりません。
+---
+
+### 最終成果物：実装用統合JSONの出力
+上記のチェックを全てパスした場合のみ、「詳細設計完了」として実装フェーズへ移行して下さい。
+移行時に、全仕様を以下の形式のJSONにコンパイル（出力）して下さい。
+ファイル名は、`{filename}_v{n}.{m}_5_detail.json` とします。
+実装コードはこのJSONの項目を1つも漏らさずカバーしなければなりません。
 
   ```json
   {
-    "version": "21.1",
+    "version": "n.m",
+    "summary": "今回の変更内容の総括",
     "features": [
-      {"id":"L101","sourceStepId":"S001","type":"KEEP","summary":"EMA計算処理を維持","targetFunction":"selectEma"},
-      {"id":"L103","sourceStepId":"S002","type":"MOD","summary":"アラート条件を変更","targetFunction":"updateAlertCondition"},
-      {"id":"L104","sourceStepId":"S003","type":"ADD","summary":"ログ出力切替を追加","targetFunction":"selectIsOutputLog"}
+      {"id":"L101","sourceStepId":"S001","type":"KEEP","summary":"入力ファイル読込処理を維持","targetFunction":"selectInputFile"}
     ],
     "functions": [
-      {"id":"F101","type":"KEEP","name":"selectEma"},
-      {"id":"F103","type":"MOD","name":"updateAlertCondition"},
-      {"id":"F104","type":"ADD","name":"selectIsOutputLog"}
+      {"id":"F101","type":"KEEP","name":"main","description":"バッチ全体を制御する主関数"},
+      {"id":"T101","type":"KEEP","name":"selectInputFile","description":"入力ファイルを読み込む補助関数"}
+    ],
+    "inputs": [
+      {"id":"I101","type":"KEEP","name":"inputPath","dataType":"string","description":"入力ファイルパス"}
+    ],
+    "outputs": [
+      {"id":"O101","type":"KEEP","name":"listData","dataType":"array","description":"読み込んだデータ"}
     ],
     "variables": [
-      {"id":"V101","type":"KEEP","name":"listEma"},
+      {"id":"V101","type":"KEEP","name":"listData","dataType":"array","description":"処理対象データ"},
       {"id":"V104","type":"ADD","name":"isOutputLog"}
     ],
-    "deleted_features": ["L099"],
-    "deleted_functions": ["F099"],
-    "deleted_variables": ["V099"],
-    "constraints": ["request_limit_40"],
+    "deleted_items": {
+      "features": ["L099"],
+      "functions": ["F099"],
+      "inputs": ["I099"],
+      "outputs": ["O099"],
+      "variables": ["V099"]
+    },
+    "constraints": ["実装上の制約（ファイルサイズ、実行時間、API制限等）"],
     "invariants": ["KEEPタグ部分の既存出力を変えない"]
   }
   ```
